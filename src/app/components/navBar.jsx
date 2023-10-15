@@ -28,7 +28,9 @@ const navBar = () => {
                 <Link href={"/"} className='text-4xl text-white font-semibold'>
                     LOGO</Link>
                     <div className='mobile-menu block md:hidden'>
-                        {/* when the nav bar is too small */}
+                        {/* when the nav bar is too small
+                            Changes Icon from x to bars
+                        */}
                         {!navbarOpen ? ( 
                         <button onClick={() => setNavbarOpen(true)} 
                         className="flex items-center px-3 py-2 border rounded border-slate-200 text-slate-200 hover:text-white hover:border-white">
@@ -41,13 +43,17 @@ const navBar = () => {
                         </button>
                         )}
                     </div>
+                    {/*  */}
                 <div className='menu hidden md:block md:w-auto' id='navbar'>
                     <ul className='flex p-4 md:p-0 md:flex-row md:space-x-8'>
-                        {/* <li>
+                        {/* Example of a static link }
+                        <li>
                         <Link href={"#about"}
                         className='block py-2 pl-3 pr-4 text-[#ADB7BE] sm:text-xl rounded md:p-0   '>
                         About</Link>
                         </li> */}
+
+                        {/* Function to dynamically add to the drop down menu */}
                         <div className='mobile-menu block md:hidden'></div>
                         {navLinks.map((link,index) => (
                                 <li key={index}>
