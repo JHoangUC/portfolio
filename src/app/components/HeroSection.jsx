@@ -58,7 +58,7 @@ const HeroSection = () => {
                       1/2 of -x         1/2 of -y
         */}
         <div className="col-span-5 place-self-center mt-4 lg:mt-0">
-          <div className="rounded-full bg-[#181818] w-[200px] h-[200px] lg:w-[300px] lg:h-[300px] relative">
+          <div className="rounded-full bg-[#181818] w-[300px] h-[300px] lg:w-[300px] lg:h-[300px] relative">
             <Image
               src="/images/me.JPG"
               className="absolute transform -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2"
