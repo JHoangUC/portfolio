@@ -1,5 +1,8 @@
+"use client"
 import React from "react";
 import ProjectCard from "./ProjectCard";
+import ProjectTag from "./ProjectTag";
+import { useState } from "react";
 
 const projectsData = [
 	{
@@ -16,7 +19,7 @@ const projectsData = [
 		title: "Project 2",
 		description: "This is a description for project 2",
 		image: "/images/1.png",
-		tag: ["All", "Web"],
+		tag: ["All", "Mobile"],
 		gitUrl: "/",
 		previewUrl: "/",
 	},
@@ -31,16 +34,52 @@ const projectsData = [
 	},
 ];
 const ProjectsSection = () => {
+	const [tag, setTag] = useState("All");
+
+	const handleTagChange = (newTag) => {
+		setTag(newTag);
+	};
+	const filteredProjects = projectsData.filter((project) =>
+		project.tag.includes(tag)
+	);
+
 	return (
 		<>
 			<h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
 				My Projects
 			</h2>
+			{/* Filter Buttons BUTTON CSS*/}
 			<div className="text-white flex flex-row justify-center items-center gap-2 py-6">
+				<ProjectTag
+					onClick={handleTagChange}
+					name="All"
+					isSelected={tag === "All"}
+				/>
+								<ProjectTag
+					onClick={handleTagChange}
+					name="Web"
+					isSelected={tag === "Web"}
+				/>
+								<ProjectTag
+					onClick={handleTagChange}
+					name="Mobile"
+					isSelected={tag === "Mobile"}
+				/>
+{/* Original static button */}
+				{/* <button className="rounded-full border-2 border-purple-500 px-6 py-3 text-xl cursor-pointer">
+					All
+				</button>
+				<button className="rounded-full border-2 border-slate-600  hover:border-white px-6 py-3 text-xl cursor-pointer">
+					Web
+				</button> */}
+				{/* adds space between the columns in myProjects */}
+			</div>
+			<div className="grid md:grid-cols-3 gap-8 md:gap-12 ">
 				{
 					// React - Adding to website dynamically
-					//uses ProjectCard component
-					projectsData.map((project) => (
+					//uses ProjectCard component - projectsData.map((project) => ( - maps through the array
+					// filteredProjects.map((project) => ( - filters the array based on the tag selected by the user (All, Web, Mobile) 
+					filteredProjects.map((project) => (
 						<ProjectCard
 							key={project.id}
 							title={project.title}
