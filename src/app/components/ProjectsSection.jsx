@@ -1,8 +1,9 @@
-"use client"
-import React from "react";
+"use client";
+import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { useState } from "react";
+import { motion, useInView } from "framer-motion";
 
 const projectsData = [
 	{
@@ -35,6 +36,8 @@ const projectsData = [
 ];
 const ProjectsSection = () => {
 	const [tag, setTag] = useState("All");
+	const ref = useRef(null);
+	const isInView = useInView(ref, { once: true });
 
 	const handleTagChange = (newTag) => {
 		setTag(newTag);
@@ -42,9 +45,13 @@ const ProjectsSection = () => {
 	const filteredProjects = projectsData.filter((project) =>
 		project.tag.includes(tag)
 	);
+	const cardVariants = {
+		initial: { y: 50, opacity: 0 },
+		animate: { y: 0, opacity: 1 },
+	};
 
 	return (
-		<>
+		<section id="projects">
 			<h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
 				My Projects
 			</h2>
@@ -55,17 +62,17 @@ const ProjectsSection = () => {
 					name="All"
 					isSelected={tag === "All"}
 				/>
-								<ProjectTag
+				<ProjectTag
 					onClick={handleTagChange}
 					name="Web"
 					isSelected={tag === "Web"}
 				/>
-								<ProjectTag
+				<ProjectTag
 					onClick={handleTagChange}
 					name="Mobile"
 					isSelected={tag === "Mobile"}
 				/>
-{/* Original static button */}
+				{/* Original static button */}
 				{/* <button className="rounded-full border-2 border-purple-500 px-6 py-3 text-xl cursor-pointer">
 					All
 				</button>
@@ -74,12 +81,15 @@ const ProjectsSection = () => {
 				</button> */}
 				{/* adds space between the columns in myProjects */}
 			</div>
-			<div className="grid md:grid-cols-3 gap-8 md:gap-12 ">
-				{
-					// React - Adding to website dynamically
-					//uses ProjectCard component - projectsData.map((project) => ( - maps through the array
-					// filteredProjects.map((project) => ( - filters the array based on the tag selected by the user (All, Web, Mobile) 
-					filteredProjects.map((project) => (
+			<ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+				{filteredProjects.map((project, index) => (
+					<motion.li
+						key={index}
+						variants={cardVariants}
+						initial="initial"
+						animate={isInView ? "animate" : "initial"}
+						transition={{ duration: 0.3, delay: index * 0.4 }}
+					>
 						<ProjectCard
 							key={project.id}
 							title={project.title}
@@ -88,10 +98,10 @@ const ProjectsSection = () => {
 							gitUrl={project.gitUrl}
 							previewUrl={project.previewUrl}
 						/>
-					))
-				}
-			</div>
-		</>
+					</motion.li>
+				))}
+			</ul>
+		</section>
 	);
 };
 
