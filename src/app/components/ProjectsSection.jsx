@@ -2,7 +2,6 @@
 import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
-import { useState } from "react";
 import { motion, useInView } from "framer-motion";
 
 const projectsData = [
