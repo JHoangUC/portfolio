@@ -30,7 +30,7 @@ const projectsData = [
 		image: "/images/sticker.png",
 		tag: ["All", "Next.js"],
 		gitUrl: "https://github.com/JHoangUC/webstore",
-		previewUrl: "https://webstore-rl8i6d1t4-jhoanguc.vercel.app/",
+		previewUrl: "https://webstore-plum.vercel.app/",
 	},
 ];
 const ProjectsSection = () => {
