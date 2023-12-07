@@ -7,30 +7,30 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
 	{
 		id: 1,
-		title: "Project 1",
-		description: "This is a description for project 1",
-		image: "/images/1.png",
-		tag: ["All", "Web"],
-		gitUrl: "/",
-		previewUrl: "/",
+		title: "Steam Clone",
+		description: "Developed using Express, Node.js, and MongoDB. | Features an encrypted login system, RESTful API, and CRUD operations.",
+		image: "/images/Steem.png",
+		tag: ["All", "Node.js"],
+		gitUrl: "https://github.com/JHoangUC/SteamClone",
+		previewUrl: "https://safe-lake-19909.herokuapp.com/",
 	},
 	{
 		id: 2,
-		title: "Project 2",
-		description: "This is a description for project 2",
-		image: "/images/1.png",
-		tag: ["All", "Mobile"],
-		gitUrl: "/",
-		previewUrl: "/",
+		title: "P.E. Lap Tracker",
+		description: "Developed using JavaScript. | Features a timer, lap counter, and a history of previous lap times. Organized by Teacher, Period, and ID.",
+		image: "/images/peProject.png",
+		tag: ["All", "Node.js"],
+		gitUrl: "https://github.com/JHoangUC/PE-Project",
+		previewUrl: "https://safe-lake-19909.herokuapp.com/peProject",
 	},
 	{
 		id: 3,
-		title: "Project 3",
-		description: "This is a description for project 3",
-		image: "/images/1.png",
-		tag: ["All", "Web"],
-		gitUrl: "/",
-		previewUrl: "/",
+		title: "Sticker Store",
+		description: "Developed using Next.Js, React, and TailwindCSS. | Features a personally designed sticker, and a link to stripe for payment.",
+		image: "/images/sticker.png",
+		tag: ["All", "Next.js"],
+		gitUrl: "https://github.com/JHoangUC/webstore",
+		previewUrl: "https://webstore-rl8i6d1t4-jhoanguc.vercel.app/",
 	},
 ];
 const ProjectsSection = () => {
@@ -63,13 +63,13 @@ const ProjectsSection = () => {
 				/>
 				<ProjectTag
 					onClick={handleTagChange}
-					name="Web"
-					isSelected={tag === "Web"}
+					name="Node.js"
+					isSelected={tag === "Node.js"}
 				/>
 				<ProjectTag
 					onClick={handleTagChange}
-					name="Mobile"
-					isSelected={tag === "Mobile"}
+					name="Next.js"
+					isSelected={tag === "Next.js"}
 				/>
 				{/* Original static button */}
 				{/* <button className="rounded-full border-2 border-purple-500 px-6 py-3 text-xl cursor-pointer">

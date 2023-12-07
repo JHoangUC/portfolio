@@ -33,7 +33,7 @@ const TAB_DATA = [
     content: (
       <ul className="list-disc pl-2">
         <li>React Native Developer, Resilience Inc</li>
-        <li>Software Engineer at Facebook</li>
+        
       </ul>
     )
   }
@@ -54,6 +54,7 @@ const AboutSection = () => {
     <section className="text-white">
       <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
         <Image
+        className="rounded-xl"
           src={"/images/about filler.gif"}
           alt="filler"
           width={700}
@@ -62,10 +63,9 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold mb-3">About Me</h2>
           <p className="text-base lg:text-lg">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti
-            quae rem, maxime enim incidunt earum natus placeat? Voluptas
-            commodi, dolorem tempore laborum maiores tenetur obcaecati quidem
-            eveniet vel, minima nam.
+          Equipped with a solid foundation in both front-end and back-end technologies, 
+          I specialize in creating seamless, responsive, and scalable applications. My proficiency extends to frameworks like React for building 
+          interactive user interfaces and MongoDB for efficient data management.
           </p>
           {/* This Div handles the path of the Tabs */}
           <div className="flex flex-row mt-8  ">
