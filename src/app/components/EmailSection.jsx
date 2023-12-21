@@ -65,18 +65,21 @@ const EmailSection = () => {
 				</div>
 			</div>
 			<div>
+				
 				{emailSubmitted ? (
 					<p className="text-green-500 text-sm mt-2">
 						Email sent successfully!
 					</p>
 				) : (
-					<form className="flex flex-col" onSubmit={handleSubmit}>
+					
+					<form className="flex flex-col" action="https://api.web3forms.com/submit" method="POST">
+						<input type="hidden" name="apikey" value="6d440886-061e-4018-8df1-f1ad2e9a7c0d"/>
 						<div className="mb-6">
 							<label
 								htmlFor="email"
 								className="text-white block mb-2 text-sm font-medium"
 							>
-								Your email
+								Email:
 							</label>
 							<input
 								name="email"
@@ -84,7 +87,7 @@ const EmailSection = () => {
 								id="email"
 								required
 								className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-								placeholder="WIP"
+								placeholder=""
 							/>
 						</div>
 						<div className="mb-6">
@@ -100,7 +103,7 @@ const EmailSection = () => {
 								id="subject"
 								required
 								className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-								placeholder="WIP"
+								placeholder=""
 							/>
 						</div>
 						<div className="mb-6">
@@ -114,7 +117,7 @@ const EmailSection = () => {
 								name="message"
 								id="message"
 								className="bg-[#18191E] border border-[#33353F] placeholder-[#9CA2A9] text-gray-100 text-sm rounded-lg block w-full p-2.5"
-								placeholder="WIP"
+								placeholder=""
 							/>
 						</div>
 						<button
@@ -123,6 +126,7 @@ const EmailSection = () => {
 						>
 							Send Message
 						</button>
+						
 					</form>
 				)}
 			</div>
