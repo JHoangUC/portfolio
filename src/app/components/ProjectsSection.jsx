@@ -9,7 +9,7 @@ const projectsData = [
 		id: 1,
 		title: "Steam Clone",
 		description: "Developed using Express, Node.js, and MongoDB. | Features an encrypted login system, RESTful API, and CRUD operations.",
-		image: "/images/steem.png",
+		image: "/images/Steem.png",
 		tag: ["All", "Node.js"],
 		gitUrl: "https://github.com/JHoangUC/SteamClone",
 		previewUrl: "https://safe-lake-19909.herokuapp.com/",
