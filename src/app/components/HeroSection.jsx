@@ -7,7 +7,7 @@ import Link from "next/link";
 
 const HeroSection = () => {
 	return (
-		<section className="lg:py-16">
+		<section className="lg:py-16 sm:py-12">
 			<div className="grid grid-cols-1 sm:grid-cols-12">
 				<motion.div
 					initial={{ opacity: 0, scale: 0.5 }}
@@ -41,7 +41,7 @@ const HeroSection = () => {
 					<div>
 						<Link
 							target="_blank"
-							href="/../download/John.Hoang_resume.pdf"
+							href="/../download/John_Hoang.Resume.docx.pdf"
 							className="px-6 inline-block py-3 w-full sm:w-fit rounded-full mr-4 bg-gradient-to-br from-primary-500 to-secondary-500 hover:bg-slate-200 text-white"
 						>
 							Resume Download

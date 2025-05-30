@@ -8,10 +8,12 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
 	return (
 		<div>
 			{/* Dynamic Project List */}
-			<div
-				className="h-52 md:h-72 rounded-t-xl relative group"
-				style={{ background: `url(${imgUrl})`, backgroundSize: "cover" }}
-			>
+				<div className="h-52 md:h-72 rounded-t-xl relative group overflow-hidden">
+					<img
+						src={imgUrl}
+						alt={title}
+						className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+					/>
 				{/* DIV = ICONS - overlay
                 items-center justify-center absolute top-0 left-0 - makes it middle of page
                 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 - same thing
