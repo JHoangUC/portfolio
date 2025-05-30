@@ -8,7 +8,7 @@ const projectsData = [
 	{
 		id: 1,
 		title: "Steam Clone",
-		description: "Developed using Express, Node.js, and MongoDB. | Features an encrypted login system, RESTful API, and CRUD operations.",
+		description: "Express, Node.js, and MongoDB. | Features an encrypted login system, RESTful API, and CRUD operations.",
 		image: "/images/Steem.png",
 		tag: ["All", "Node.js"],
 		gitUrl: "https://github.com/JHoangUC/SteamClone",
@@ -17,7 +17,7 @@ const projectsData = [
 	{
 		id: 2,
 		title: "P.E. Lap Tracker",
-		description: "Developed using JavaScript. | Features a timer, lap counter, and a history of previous lap times. Organized by Teacher, Period, and ID.",
+		description: "JavaScript. | Features a timer, lap counter, and a history of previous lap times. Organized by Teacher, Period, and ID.",
 		image: "/images/peProject.png",
 		tag: ["All", "Node.js"],
 		gitUrl: "https://github.com/JHoangUC/PE-Project",
@@ -26,8 +26,8 @@ const projectsData = [
 	{
 		id: 3,
 		title: "Sticker Store",
-		description: "Developed using Next.Js, React, and TailwindCSS. | Features a personally designed sticker, and a link to stripe for payment.",
-		image: "/images/sticker.png",
+		description: "Next.Js, React, and TailwindCSS. | Features a personally designed sticker, and a link to stripe for payment.",
+		image: "/images/khoi.png",
 		tag: ["All", "Next.js"],
 		gitUrl: "https://github.com/JHoangUC/webstore",
 		previewUrl: "https://webstore-plum.vercel.app/",
