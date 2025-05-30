@@ -58,9 +58,9 @@ const AboutSection = () => {
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className="text-4xl font-bold mb-3">About Me</h2>
           <p className="text-base lg:text-lg">
-          I'm a full-stack developer and designer focused on building intuitive, scalable digital experiences. From improving SEO to designing interfaces or coding full-stack apps, 
+          I&apos;m a full-stack developer and designer focused on building intuitive, scalable digital experiences. From improving SEO to designing interfaces or coding full-stack apps, 
           I think ahead — anticipating how products will grow and evolve. 
-          With a UX background and an entrepreneurial mindset, I’m always looking for the next opportunity to build something meaningful.
+          With a UX background and an entrepreneurial mindset, I&apos;m always looking for the next opportunity to build something meaningful.
           </p>
           {/* This Div handles the path of the Tabs */}
           <div className="flex flex-row mt-8  ">
