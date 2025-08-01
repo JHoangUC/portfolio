@@ -51,7 +51,7 @@ useEffect(() => {
                 key={i}
                 src={img}
                 alt={`Proof preview ${i + 1}`}
-                className="h-20  object-contain rounded shrink-0"
+                className="h-20 object-contain rounded shrink-0"
               />
             ))}
           </div>
