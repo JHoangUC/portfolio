@@ -45,13 +45,13 @@ useEffect(() => {
 
         {/* Image previews */}
         {hasImages && (
-          <div className="flex gap-2 mt-4">
+          <div className="flex gap-2 mt-4 overflow-x-auto scrollbar-custom">
             {proof.images.slice(0, 4).map((img, i) => (
               <img
                 key={i}
                 src={img}
                 alt={`Proof preview ${i + 1}`}
-                className=" h-20 w-auto object-contain rounded"
+                className="h-20 object-contain rounded shrink-0"
               />
             ))}
           </div>
