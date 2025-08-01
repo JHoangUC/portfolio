@@ -11,8 +11,7 @@ const workData = [
     company: "Tempo Communications",
     description:[
       "Managed and optimized a multi-platform web stack across WordPress, Shopify, and Craft CMS.",
-      "Shaped concepts into 250+ high-fidelity Figma frames in 3 weeks (vs 12), adding 2× detail, freeing
-senior resources and averting delays."
+      "Shaped concepts into 250+ high-fidelity Figma frames in 3 weeks(vs 12), adding 2× detail, freeing senior resources and averting delays."
     ],
       
     tag: ["Career"],
