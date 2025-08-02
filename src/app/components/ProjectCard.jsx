@@ -4,7 +4,7 @@ import Link from "next/link";
 
 // parameters added to ProjectCard have to be added to ProjectData in ProjectSection
 //as well as the map function
-const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
+const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl, year, stack }) => {
 	return (
 		<div>
 			{/* Dynamic Project List */}
@@ -39,9 +39,13 @@ const ProjectCard = ({ imgUrl, title, description, gitUrl, previewUrl }) => {
 				</div>
 			</div>
 			{/* Project Name & Description */}
-			<div className="text-white rounded-b-xl mt-3 bg-[#181818]py-6 px-4">
-				<h5 className="text-xl font-semibold mb-2">{title}</h5>
-				<p className="text-[#ADB7BE]">{description}</p>
+			<div className="text-white rounded-b-xl bg-[#181818] py-6 px-5">
+				<div className="flex items-center justify-between ">
+				<h5 className="text-xl font-semibold ">{title}</h5>
+				<h7 className="text-small text-gray-400 font-light">{year}</h7>
+				</div>
+				<h6 className="text-sm font-normal mb-2">{stack}</h6>
+				<p className="text-[#ADB7BE] text-sm leading-relaxed">{description}</p>
 			</div>
 		</div>
 	);

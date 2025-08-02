@@ -8,7 +8,9 @@ const projectsData = [
 	{
 		id: 1,
 		title: "Steam Clone",
-		description: "Express, Node.js, and MongoDB. | Features an encrypted login system, RESTful API, and CRUD operations.",
+		stack: "Express | Node.js | MongoDB",
+		description: "Implemented MongoDB schema design that powers social connections and seamless cart management.",
+		year: "2018",
 		image: "/images/Steem.png",
 		tag: ["All", "Node.js"],
 		gitUrl: "https://github.com/JHoangUC/SteamClone",
@@ -16,8 +18,10 @@ const projectsData = [
 	},
 	{
 		id: 2,
-		title: "P.E. Lap Tracker",
-		description: "JavaScript. | Features a timer, lap counter, and a history of previous lap times. Organized by Teacher, Period, and ID.",
+		title: "Fitness Lap Tracker",
+		stack: "JavaScript | HTML | CSS",
+		description: "Automates lap tracking for a 150+ students. Data is organized by Teacher, Period, and ID.",
+		year: "2019",
 		image: "/images/peProject.png",
 		tag: ["All", "Node.js"],
 		gitUrl: "https://github.com/JHoangUC/PE-Project",
@@ -26,7 +30,9 @@ const projectsData = [
 	{
 		id: 3,
 		title: "Sticker Store",
-		description: "Next.Js, React, and TailwindCSS. | Features a personally designed sticker, and a link to stripe for payment.",
+		stack: "Next.Js | React | TailwindCSS",
+		description: " Features a personally designed sticker, and a link to stripe for payment.",
+		year: "2023",
 		image: "/images/khoi.png",
 		tag: ["All", "Next.js"],
 		gitUrl: "https://github.com/JHoangUC/webstore",
@@ -92,6 +98,8 @@ const ProjectsSection = () => {
 						<ProjectCard
 							key={project.id}
 							title={project.title}
+							stack={project.stack}
+							year={project.year}
 							description={project.description}
 							imgUrl={project.image}
 							gitUrl={project.gitUrl}
